@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  intime: 2017-04-14 14:44:35
+  outtime: 2017-04-14 14:44:35
+
+two:
+  intime: 2017-04-14 14:44:35
+  outtime: 2017-04-14 14:44:35

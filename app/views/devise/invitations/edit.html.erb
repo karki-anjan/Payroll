@@ -1,0 +1,52 @@
+<h2><%= t 'devise.invitations.edit.header' %></h2>
+
+<%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => { :method => :put } do |f| %>
+  <%= devise_error_messages! %>
+  <%= f.hidden_field :invitation_token %>
+
+  <% if f.object.class.require_password_on_accepting %>
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %></p>
+
+  <div class="field">
+    <%= f.label :Firstname %><br />
+    <%= f.text_field :first_name, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :Lastname %><br />
+    <%= f.text_field :last_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Username %><br />
+    <%= f.text_field :username, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :DOB %><br />
+    <%= f.text_field :dob, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Phoneno %><br />
+    <%= f.text_field :phone_no, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Address %><br />
+    <%= f.text_field :address, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :Department %><br />
+    <%= f.text_field :department, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :Position%><br />
+    <%= f.text_field :position, autofocus: true %>
+  <% end %>
+
+  <p><%= f.submit t("devise.invitations.edit.submit_button") %></p>
+<% end %>
