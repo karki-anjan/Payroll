@@ -13,7 +13,7 @@ collection_action :new_invitation do
 end 
 
 collection_action :send_invitation, :method => :post do
-  @user = User.invite!(:email =>params[:user]["email"], type: params[:user][:type], first_name: params[:user][:first_name])
+  @user = User.invite!(:email =>params[:user]["email"], type: params[:user][:type])
   if @user.errors.empty?
     flash[:success] = "User has been successfully invited." 
     redirect_to admin_users_path

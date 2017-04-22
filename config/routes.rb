@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
  
 
+  
+  get '/search', :to => 'search#show'
+  post '/search', :to => 'search#show'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   devise_for :users, 
