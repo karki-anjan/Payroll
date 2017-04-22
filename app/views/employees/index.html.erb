@@ -15,17 +15,20 @@
               <div class="employeedetails-plan" style="font-size: 14px;line-height: 1.5;">   
                     <!--  <%= @employees.index(employee)+1%><br> -->
                  <div class="profilepic"> <%= image_tag employee.avatar%></div><br>
-                  Employee_ID:<%= employee.id%><br>           
-                  Name:      <%= employee.first_name%> <%= employee.last_name%><br>
-                  Phone_no:  <%= employee.phone_no%><br>
-                  Address:   <%= employee.address%><br>
-                  Email:     <%= employee.email%><br>
+                    Employee_ID:<%= employee.id%><br>           
+                    Name:      <%= employee.first_name%> <%= employee.last_name%><br>
+                    Phone_no:  <%= employee.phone_no%><br>
+                    Address:   <%= employee.address%><br>
+                    Email:     <%= employee.email%><br>
+                    department:<%= employee.department%><br>
+                    Position:  <%= employee.position%><br>
+                    DOB:       <%= employee.dob%><br>
+                  <div style="padding: 15px">
+                     <%= link_to "View", employee%>
+                     <%= link_to "edit", "#"%>
+                     <%= link_to "delete", "#"%>
+                  </div>
                   
-                  department:<%= employee.department%><br>
-                  Position:  <%= employee.position%><br>
-                  DOB:       <%= employee.dob%><br>
-                    <%= link_to "profile", employee, class: "btn btn-default section-btn"%>
-                   <%= link_to "Attendance", "#", class: "btn btn-default section-btn"%>
             </div>
       </div>
      <%end%>

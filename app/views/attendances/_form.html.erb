@@ -18,10 +18,24 @@
 
   <div class="field">
     <%= f.label :outtime %>
-    <%= f.datetime_select :outtime %>
+    <%= f.text_field :outtime,value:"",id:"time-holder" %>
   </div>
 
-  <div class="actions">
+  <div class="actions" value="time",name="timer", id="time">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<script type="text/javascript">
+$(
+    function(){
+
+        $('#time').click(function(){
+                  var time = new Date();                
+                  $('#time-holder').val(time.toLocaleTimeString());  
+        });
+
+    }
+);
+</script>
