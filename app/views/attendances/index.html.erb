@@ -1,7 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Attendances</h1>
-
 <table>
   <thead>
     <tr>
@@ -12,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% @attendances.each do |attendance| %>
+    <% @attendances.employee.each do |attendance| %>
       <tr>
         <td><%= attendance.intime %></td>
         <td><%= attendance.outtime %></td>

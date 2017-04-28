@@ -1,7 +1,48 @@
 
+   <table class="table table-bordered">
+    <thead>
+      <tr>
+       <th>SN          </th>
+       <th>Photo       </th>
+       <th>Employee_ID </th>           
+       <th>Name        </th>
+       <th>Phone_no    </th> 
+       <th>Address     </th>
+       <th>Email       </th>
+       <th>department  </th>
+       <th>Position    </th>
+       <th>DOB         </th>
+       <th>Action      </th>
+      </tr>
+    </thead>
+    <% @employees.each do |employee|%>         
+    <tbody> 
+        <tr>
+          <td><%= @employees.index(employee)+1%><br></td>
+          <td><div class="tablepic"> <%= image_tag employee.avatar%></div></td>
+          <td><%= employee.id%><br> </td>
+          <td><%= employee.first_name%> <%= employee.last_name%></td>
+          <td><%= employee.phone_no%></td>
+          <td><%= employee.address%></td>
+          <td><%= employee.email%></td>
+          <td><%= employee.department%></td>
+          <td><%= employee.position%></td>
+          <td><%= employee.dob%></td>
+          <td>
+              <%= link_to "View", employee%>
+              <%= link_to "edit", "#"%>
+              <%= link_to "delete", "#"%>
+          </td>
+       </tr>
+    </tbody>
+    <%end%>
+  </table>
 
 
-<section id="employeedetails">
+
+
+
+<!-- <section id="employeedetails">
      <div class="container">
           <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -9,12 +50,13 @@
                          <h1>Our Employees List</h1>
                     </div>
                </div>
-               <% @employees.each do |employee|%>
+             
+                    <% @employees.each do |employee|%>
       <div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.2s">
 
               <div class="employeedetails-plan" style="font-size: 14px;line-height: 1.5;">   
                     <!--  <%= @employees.index(employee)+1%><br> -->
-                 <div class="profilepic"> <%= image_tag employee.avatar%></div><br>
+                 <!-- <div class="profilepic"> <%= image_tag employee.avatar%></div><br>
                     Employee_ID:<%= employee.id%><br>           
                     Name:      <%= employee.first_name%> <%= employee.last_name%><br>
                     Phone_no:  <%= employee.phone_no%><br>
@@ -28,10 +70,9 @@
                      <%= link_to "edit", "#"%>
                      <%= link_to "delete", "#"%>
                   </div>
-                  
             </div>
       </div>
      <%end%>
           </div>
      </div>
-</section>
+</section> -->

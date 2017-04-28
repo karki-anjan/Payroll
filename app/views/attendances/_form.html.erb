@@ -13,17 +13,18 @@
 
   <div class="field">
     <%= f.label :intime %>
-    <%= f.datetime_select :intime %>
-  </div>
-
-  <div class="field">
-    <%= f.label :outtime %>
-    <%= f.text_field :outtime,value:"",id:"time-holder" %>
+    <%= f.text_field :intime,value:"",id:"time-holder" %>
   </div>
 
   <div class="actions" value="time",name="timer", id="time">
     <%= f.submit %>
   </div>
+
+   <div class="field">
+    <%= f.label :outtime %>
+    <%= f.text_field :outtime %>
+  </div>
+
 <% end %>
 
 

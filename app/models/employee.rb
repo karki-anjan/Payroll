@@ -1,4 +1,4 @@
 class Employee < User
 	belongs_to :salary
-	belongs_to :attendance
+	has_many :attendance
 end

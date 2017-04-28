@@ -1,4 +1,4 @@
 class Attendance < ApplicationRecord
-	has_many :employees
+	belongs_to :employees
 	has_many :salaries, through: :employees
 end

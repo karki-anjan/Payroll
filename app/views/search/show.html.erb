@@ -1,2 +1,39 @@
-<h1>Search#show</h1>
-<p>Find me in app/views/search/show.html.erb</p>
+
+
+
+<section id="employeedetails">
+     <div class="container">
+          <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                         <h1>Our Employees List</h1>
+                    </div>
+               </div>
+    <% if @results %>
+  				<% @results.each do |employee| %>
+                
+      <div class="wow fadeInUp col-md-3 col-sm-3" data-wow-delay="0.2s">
+
+              <div class="employeedetails-plan" style="font-size: 14px;line-height: 1.5;">   
+                 <div class="profilepic"> <%= image_tag employee.avatar%></div><br>
+                    Employee_ID:<%= employee.id%><br>           
+                    Name:      <%= employee.first_name%> <%= employee.last_name%><br>
+                    Phone_no:  <%= employee.phone_no%><br>
+                    Address:   <%= employee.address%><br>
+                    Email:     <%= employee.email%><br>
+                    department:<%= employee.department%><br>
+                    Position:  <%= employee.position%><br>
+                    DOB:       <%= employee.dob%><br>
+                  <div class="buttonved" style="padding: 15px" >
+                     <%= link_to "View", employee%>
+                     <%= link_to "edit", "#"%>
+                     <%= link_to "delete", "#"%>
+                  </div>
+                  
+            </div>
+      </div>
+     <%end%>
+   <% end %> 
+          </div>
+     </div>
+</section>

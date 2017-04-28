@@ -7,11 +7,15 @@
 
   <% if f.object.class.require_password_on_accepting %>
   
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
+  <div>
+  <%= f.label :password %><br />
+  <%= f.password_field :password %>
+  </div>>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
+  <div>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+  </div>
 
   <div class="field">
     <%= f.label :Firstname %><br />

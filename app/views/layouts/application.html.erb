@@ -11,7 +11,7 @@
   </head>
   <body>
 
- <nav class="navbar navbar-default navbar-fixed-top" style=" background-color: black; margin-bottom: 0px !important; border: none;border-radius: 0px;">
+ <nav class="navbar navbar-default navbar-fixed-top" style=" background-color: rgba(71, 71, 71, 0.77); margin-bottom: 0px !important; border: none;border-radius: 0px;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -27,7 +27,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link <span class="sr-only">(current)</span></a></li>
         <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -59,9 +59,11 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
+            <li role="separator" class="divider"> </li>
             <li><a href="#">Another action</a></li>
+            <li role="separator" class="divider"> </li>
             <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
+            <li role="separator" class="divider"> </li>
             <li><a href="#">Separated link</a></li>
           </ul>
         </li>
@@ -71,7 +73,7 @@
     <div class="input-group">
         <%= f.text_field :search_query, class:"form-control",placeholder:"Search employee" %>
         <div class="input-group-btn">
-          <%= f.submit 'search',class:"btn btn-default"%>
+          <%= f.submit 'search',class:"btn btn-default" %>
         </div>
     <% end %>
 
@@ -81,15 +83,15 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-    <div style="padding-top: 50px;">
+    <div style="padding-top: 50px; padding-bottom: 50px;">
     <%= yield %>
     </div>
 
 <footer>
-  <div class="navbar  navbar-inverse navbar-fixed-bottom" style="background-color: black;"> 
+  <div class="navbar  navbar-inverse navbar-fixed-bottom" style="background-color:rgba(253, 236, 130, 0.43);"> 
      <div class="container">
-       <div class="navbar-text pull=left">
-      <p> © company 2016.</p>
+       <div style="text-align: center;">
+      <p style="color:black; font-family: ‘Courier New’,Courier,monospace; font-size: 20px; padding-top: 8px;"> © Anjan Karki.</p>
      </div>
         
    </div>
